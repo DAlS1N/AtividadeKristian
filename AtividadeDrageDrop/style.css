@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.galeria, .favoritos {
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    min-height: 400px;
+    text-align: center;
+}
+
+.galeria h2, .favoritos h2 {
+    margin-top: 0;
+}
+
+img.draggable {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+img.draggable.dragging {
+    opacity: 0.5;
+}
+
+.dropzone {
+    background-color: #f9f9f9;
+    border: 2px dashed #bbb;
+}
+
+.dropzone.over {
+    border-color: #ff6600;
+}
+
+img.highlight {
+    border-color: #ff6600;
+}
