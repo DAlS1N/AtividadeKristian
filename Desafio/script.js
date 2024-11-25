@@ -1,13 +1,21 @@
-const apiKey = "706e6c2535844f60b8b192311242511";
-const cidade = "São Paulo";
-const url = `http://api.weatherapi.com/v1/current.json?key=&q=${cidade}&aqi=yes`;
+const apiKey = '45bd03bc75c98e54c9f31cdb0a964f3d'; // Substitua com sua chave da OpenWeatherMap
 
-fetch(url)
-  .then((response) => {
-    if (!response.ok) throw new Error("Erro ao buscar dados");
-    return response.json();
-  })
-  .then((data) => {
-    console.log(`A temperatura em ${data.name} é de ${data.main.temp}°C`);
-  })
-  .catch((error) => console.error("Erro:", error));
+document.getElementById('weatherForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const city = document.getElementById('city').value;
+  const apiUrl = `https://www.weatherapi.com/api-explorer.aspx`;
+
+  fetch(apiUrl)
+    .then(response => {
+      if (!response.ok) throw new Error('Cidade não encontrada');
+      return response.json();
+    })
+    .then(data => {
+      const temperature = data.main.temp;
+      document.getElementById('result').innerText = `A temperatura atual em ${city} é ${temperature}°C.`;
+    })
+    .catch(error => {
+      document.getElementById('result').innerText = `Erro: ${error.message}`;
+    });
+});
