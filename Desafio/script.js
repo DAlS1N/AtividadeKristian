@@ -5,7 +5,7 @@ document.getElementById('weatherForm').addEventListener('submit', function(event
   
   const city = document.getElementById('city').value;
   const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&lang=pt`;
-  const icon = `https://www.weatherapi.com/docs/weather_conditions.json`
+
 
   
   fetch(apiUrl)
@@ -22,12 +22,15 @@ document.getElementById('weatherForm').addEventListener('submit', function(event
       const condicao= data.current.condition.text;
 
       document.getElementById('result').innerHTML = `
-      <img src="https:${icone}" alt="${condicao}" />
-      \nDados da Cidade: ${city} 
-      \nTemperatura atual: ${temperature}°C.
-      \nSensação termica: ${sensacaoTermica}°C.
-      \nHumidade: ${humidade}%.
-      \nVento: ${vento}km/h.
+      <div>
+      <img src="https:${icone}" alt="${condicao}"/>
+      <p>${condicao}</p>
+      </div>
+      <h2>Dados da Cidade: ${city}</h2>
+      <p>Temperatura atual: ${temperature}°C<p>
+      <p>Sensação termica: ${sensacaoTermica}°C<p>
+      <p>Humidade: ${humidade}%<p>
+      <p>Vento: ${vento}km/h<p>
       `
     })
     .catch(error => {
