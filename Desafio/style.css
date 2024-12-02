@@ -1,0 +1,125 @@
+body{
+
+    margin: 0 auto;
+    background-image: url(FundoAtividade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+header{
+
+background-color: #0079c2;
+color: white;
+padding: 20px 20px 20px 20px;
+}
+
+footer{
+
+    background-color: #0079c2;
+    color: rgb(0, 0, 0);
+    padding: 20px 20px 20px 20px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    text-decoration: blink;
+}
+    
+
+#weatherForm{
+
+    font-size:  17px;
+    
+}
+
+
+
+.WeatherGrid{
+
+display: flex;   
+gap: 50px;
+justify-content:space-evenly;
+padding: 60px 30px 60px 30px;
+}
+
+#ajuste{
+display: flex;   
+gap: 30px;
+}
+
+
+
+
+#resultDeOutrosDias{
+display: flex;   
+gap: 5%;
+
+}
+
+
+
+
+#resultDeOutrosDias div{
+
+background-color: aliceblue;
+border-radius: 20%;
+padding: 30px;
+}
+
+
+#result div{
+
+background-color: rgb(191, 253, 250);
+padding: 20px;
+border-radius: 20%;
+
+}
+
+
+.BotaoEstilizado{
+
+background-color: rgb(0, 86, 139);    
+color: white;
+border: none;
+padding: 8px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 12px;
+transition-duration: 0.4s;
+}
+
+  
+  .BotaoEstilizado:hover {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);
+  }
+
+
+
+.BarraEstilizada{
+    background-color: rgb(255, 255, 255); 
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 8px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+#Centralizado {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+div #Centralizado{
+
+    padding: 0px;
+
+}

@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Previsão do tempo</title>
 </head>
 <body>
 <header>
     <nav>
-
+        <form id="weatherForm">
+            <label for="city">Digite o nome da cidade:</label>
+            <input class="BarraEstilizada" type="text" id="city" name="city" required>
+            <button class="BotaoEstilizado" type="submit">Buscar Clima</button>
+          </form>
     </nav>
 </header>
 
-
-
-    <section>
-
-        <form id="weatherForm">
-            <label for="city">Digite o nome da cidade:</label>
-            <input type="text" id="city" name="city" required>
-            <button type="submit">Buscar Clima</button>
-          </form>
-
-
+    <section  class="WeatherGrid">
           <div id="result"></div>
-          <div id="resultNext"></div>
-
+          <div id="resultDeOutrosDias"></div>
     </section>
-
-
 
     <script src="script.js"></script>
 <footer>
